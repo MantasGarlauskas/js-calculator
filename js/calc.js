@@ -14,6 +14,7 @@ const button = document.querySelector('.button');
 result.innerHTML = ''
 
 button.addEventListener('click', (e) => {
-    result.innerHTML = matematika[action.value](Number(firstNumber.value), Number(secondNumber.value))
     e.preventDefault()
+    result.innerHTML = `${firstNumber.value} ${action.value} ${secondNumber.value} = ${matematika[action.value](Number(firstNumber.value), Number(secondNumber.value))}`
+
 })
